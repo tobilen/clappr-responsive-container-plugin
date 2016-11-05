@@ -13,13 +13,13 @@ Add both Clappr and this plugin scripts to your HTML:
 
 You can also find the project on npm: https://www.npmjs.com/package/clappr-responsive-container-plugin
 
-Then just add `ClapprResponsiveContainerPlugin` into the list of plugins of your player instance as shown below.
+Then just add `ResponsiveContainer` into the list of plugins of your player instance as shown below.
 
 ```javascript
 var player = new Clappr.Player({
   source: "http://your.video/here.mp4",
   plugins: {
-    core: [ClapprResponsiveContainerPlugin]
+    container: [ResponsiveContainer]
   }
 });
 ```
