@@ -36,7 +36,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'clappr-responsive-container-plugin.js',
-    library: 'ClapprResponsiveContainerPlugin',
+    library: 'ResponsiveContainer',
     libraryTarget: 'umd',
   },
 };

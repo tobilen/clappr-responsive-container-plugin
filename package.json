@@ -6,11 +6,15 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --progress --optimize-occurence-order",
     "watch": "./node_modules/.bin/webpack --progress --optimize-occurence-order --watch",
-    "release": "./node_modules/.bin/webpack --progress --optimize-occurence-order -p"
+    "release": "./node_modules/.bin/webpack --progress --optimize-occurence-order -p",
+    "start": "./node_modules/.bin/webpack-dev-server --content-base demo/ --output-public-path /latest --hot"
   },
   "author": "Tobias Lengsholz <tobias@lengsholz.de>",
   "license": "MIT",
   "repository": "tobilen/clappr-responsive-container-plugin",
+  "dependencies": {
+    "clappr": "^0.2.22"
+  },
   "devDependencies": {
     "babel-core": "^6.7.5",
     "babel-loader": "^6.2.4",
@@ -20,10 +24,13 @@
     "compass-mixins": "^0.12.7",
     "css-loader": "^0.24.0",
     "es6-promise-polyfill": "^1.2.0",
+    "file-loader": "^0.8.4",
     "html-loader": "^0.4.3",
     "node-sass": "~3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.2"
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
   }
 }
