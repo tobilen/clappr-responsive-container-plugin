@@ -7,6 +7,7 @@ export default class ResponsiveContainer extends UIContainerPlugin {
     super(container)
     this.playerInfo = PlayerInfo.getInstance(this.options.playerId)
     this.playerWrapper = this.playerInfo.options.parentElement
+    this._onResize()
   }
 
   bindEvents() {
