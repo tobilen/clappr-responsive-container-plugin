@@ -7,7 +7,9 @@ export default class ResponsiveContainer extends UIContainerPlugin {
     super(container)
     this.playerInfo = PlayerInfo.getInstance(this.options.playerId)
     this.playerWrapper = this.playerInfo.options.parentElement
-    this._onResize()
+    $(document).ready(() => {
+      setTimeout(this._onResize(), 500)
+    })
   }
 
   bindEvents() {
@@ -17,6 +19,7 @@ export default class ResponsiveContainer extends UIContainerPlugin {
   }
 
   _onResize() {
+    console.log(this.playerWrapper.clientWidth)
     this.resizeByWidth(this.playerWrapper.clientWidth)
   }
 
@@ -29,7 +32,8 @@ export default class ResponsiveContainer extends UIContainerPlugin {
   triggerResize(newSize) {
     //should initiate resizing. doesnt though, so we bypass and mutate directly with jq
     Mediator.trigger(`${this.options.playerId}:${Events.PLAYER_RESIZE}`, newSize)
-    let $playerDiv = $(this.playerWrapper).children("[data-player]")
+    const $playerDiv = $(this.playerWrapper).children("[data-player]")
+    console.log($playerDiv)
     $playerDiv.width(newSize.width)
     $playerDiv.height(newSize.height)
   }
