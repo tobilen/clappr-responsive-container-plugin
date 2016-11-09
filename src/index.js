@@ -19,8 +19,7 @@ export default class ResponsiveContainer extends UIContainerPlugin {
   }
 
   _onResize() {
-    console.log(this.playerWrapper.clientWidth)
-    this.resizeByWidth(this.playerWrapper.clientWidth)
+    if(this.playerWrapper.clientWidth !== 0) this.resizeByWidth(this.playerWrapper.clientWidth)
   }
 
   resizeByWidth(newWidth) {
