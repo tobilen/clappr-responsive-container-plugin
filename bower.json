@@ -1,7 +1,7 @@
 {
   "name": "clappr-responsive-container-plugin",
   "description": "A plugin for clappr which will resize the container to never be larger than the current viewport width.",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "homepage": "https://github.com/tobilen/clappr-responsive-container-plugin",
   "authors": [
     "Tobias Lengsholz <tobias@lengsholz.de>"
