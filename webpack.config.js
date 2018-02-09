@@ -1,5 +1,4 @@
 var path = require('path');
-var webpack = require('webpack');
 var Clean = require('clean-webpack-plugin');
 
 var plugins = [
@@ -20,14 +19,7 @@ module.exports = {
         query: {
           compact: true,
         }
-      },
-      {
-        test: /\.sass$/,
-        loaders: ['css', 'sass?includePaths[]=' + path.resolve(__dirname, "./node_modules/compass-mixins/lib")],
-      },
-      {
-        test: /\.html/, loader: 'html?minimize=false'
-      },
+      }
     ],
   },
   resolve: {
